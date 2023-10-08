@@ -1,0 +1,466 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    width:100%;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ul {
+   padding-left: 0 !important;
+}
+.clear {
+    clear: both;
+}
+#main{
+  overflow: hidden;
+}
+#header{
+    height: 46px;
+    background-color: #000;
+   
+   position: fixed;
+   top:0;
+   right: 0;
+   left: 0;
+   
+   z-index: 10;
+}
+#nav >li >a {
+    text-transform: uppercase;
+    color: #fff;
+}
+#nav li a {
+    width: 100%;
+    line-height: 46px;
+    text-decoration: none;
+    padding: 0 24px;
+    display: inline-block;
+}
+#nav  {
+    
+    display:block;
+    margin-bottom: 0;
+    flex-direction: row;
+    z-index: 110;
+   
+}
+
+#nav .subnav li:hover a,
+#nav>li:hover>a {
+    background-color: #ccc;
+    color: #000;
+}
+#nav>li{
+    
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+    list-style: none;
+ 
+}
+.menu-btn{
+    display: none;
+}
+.menu-btn,  
+.search-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float:right;
+    color: #fff;
+    padding: 10px 24px;
+
+}
+.search-btn:hover {
+    background-color:red;
+    color:#fff;
+}
+#nav .subnav {
+    z-index: 10;
+   box-shadow: 0 0 130px rgba(0,0,0,1);
+   min-width: 160px;
+   top: 100%;
+   left:0;
+   display: none;
+    position: absolute;
+    background-color: #fff;
+    
+}
+ #nav .subnav a {
+    padding: 0 16px !important;
+    line-height: 38px;
+    text-align: left;
+ }
+
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav>li> a {
+    color: #000;
+    display: block;
+    padding :10px 12px;
+
+}
+
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url(/assets/img/ny.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text-content {
+    color: #fff;
+    bottom: 0;
+    position: absolute;
+    padding: 32px 16px;
+}
+.text-content .text-heading{
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+
+}
+.text-content .text-description {
+    font-size: 15px;
+    margin: 15px 0;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.w3-wide {
+    letter-spacing: 4px;
+}
+
+#content .content-section {
+    text-align: center;
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px 112px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-section .section-heading{
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 30px;
+}
+.content-section .section-sub-heading{
+    font-size: 15px;
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.content-section .about-text {
+    text-align: justify;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+.rows{
+    padding: 32px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+}
+
+.rows .band-member {
+
+    width: 33.3333%;
+}
+.band-member p {
+    margin: 15px 0;
+}
+.band-member img {
+    width: 60%;
+}
+
+.bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: black!important;
+}
+
+.tour-section .ticket-list{
+    background-color: #fff;
+    color: #757575!important;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.ticket-list li {
+    color: #757575!important;
+    list-style: none;
+    border-bottom: #ddd 1px solid;
+    padding: 8px 16px;
+}
+.ticket-list .sold-out {
+    margin-left: 16px;
+    padding: 0 8px;
+    text-align: center;
+    line-height: 1.5;
+    background-color: red;
+}
+.ticket-list .quality {
+    color:#fff;
+    border-radius: 50px;
+    background-color: #000;
+   float: right;
+   padding: 0 8px;
+   margin-right: 16px;
+}
+.tour-section .rows {
+    margin: 0 -16px;
+    padding: 32px 8px;
+}
+
+.rows .tour-item{
+    width: calc(100%/3);
+    padding: 0 8px;
+}
+
+.tour-item img {
+    width: 100%;
+}
+.tour-item img:hover{
+    opacity: 0.60;
+}
+.tour-description {
+    padding: 0.01em 16px;
+    
+    text-align: left;
+    background-color: #fff;
+    color: #000;
+}
+
+.tour-description p{
+    margin: 15px 0;
+}
+.tour-description button {
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    background-color: #000;
+    color:#fff;
+    border: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+}
+.tour-description button:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+.wrapper {
+    padding-top: 100px;
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+.wrapper .ticket-box {
+    width: 900px;
+    max-width: 100%;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    animation: FadeIn ease 0.5s;
+}
+.ticket-box .header-content {
+    padding:32px 16px;
+    color: #fff!important;
+    background-color: #009688!important;
+    text-align: center;
+
+}
+.fa-times{
+    margin-right: 16px;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+
+}
+.close:hover ,
+.modal-footers .close-button:hover,
+.ticket-box-content .order-button:hover {
+    background-color: #ccc;
+    color: #000 !important;
+}
+.ticket-box-content {
+    padding: 0.01em 8px;
+}
+.ticket-box-content .w-input {
+    padding: 8px;
+    width: 100%;
+    border: solid 1px black;
+}
+
+.ticket-box-content .order-button {
+    width: 100%;
+    background-color: #009688;
+    color: #FFF;
+    padding: 16px;
+    margin: 16px 0;
+}
+.modal-footers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modal-footers .close-button {
+    background-color: red;
+    margin: 16px 0;
+    padding: 8px 16px;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+   
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;;
+}
+.modal-footers span {
+    text-align: center;
+    margin: 16px 0;
+    padding: 8px 16px;
+
+}
+.modal-display-js {
+    display: block  ;
+}
+.closed {
+    display: none ;
+}
+
+
+.rows .col-half {
+    float: left;
+    text-align: left;
+    width: calc(100%/2);
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+.col-half i {
+    width: 30px;
+    display: inline-block;
+}
+
+
+.col-ful {
+    width: 100%;
+}
+.form > .col-half , .col-ful{
+    font-size: 15px;
+}
+.form .rows {
+    padding: 0;
+}
+.rows .input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    display: block;
+    font-size: 15px;
+   
+}
+.margin-right {
+    margin-right: 10px !important;
+}
+
+.button {
+    background-color: black;
+    margin: 16px 0;
+    padding: 8px 16px;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    color: #FFF;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+   
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;;
+}
+ @keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }
+
+ .map img {
+    width: 100%;
+    filter: grayscale(50%);
+ }
+ 
+.footer {
+    z-index:100;
+    padding: 64px 16px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    font-size: 24px;
+}
+ .socialist i {
+    color: black;
+ }
+ .f-size {
+    font-size: 15px;
+ }
+ .f-size a {
+    color:#ccc;
+ }
